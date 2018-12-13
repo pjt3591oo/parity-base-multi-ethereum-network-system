@@ -1,0 +1,35 @@
+version: '3.2'
+
+services:
+    node1.ethereum.com:
+      image: 'ethereum_parity:0.1'
+      ports:
+        - 30303:30303
+        - 8545:8545
+        - 8180:8180
+        - 8455:8455
+      tty: true
+      container_name: node1.ethereum.com
+      working_dir: /home/blockchain
+   
+    node2.ethereum.com:
+      image: 'ethereum_parity:0.1'
+      ports:
+        - 30304:30303
+        - 8546:8545
+        - 8181:8180
+        - 8456:8455
+      tty: true
+      container_name: node2.ethereum.com
+      working_dir: /home/blockchain
+   
+    node3.ethereum.com:
+      image: 'ethereum_parity:0.1'
+      ports:
+        - 30305:30303
+        - 8547:8545
+        - 8182:8180
+        - 8457:8455
+      tty: true
+      container_name: node3.ethereum.com
+      working_dir: /home/blockchain
